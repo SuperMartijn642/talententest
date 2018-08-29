@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    {{ apos.area(data.page, 'body', {
+  widgets: {
+    'apostrophe-rich-text': {
+      toolbar: [ 'Bold', 'Italic' ]
+    },
+    hero: {}
+  }
+}) }}
+
+{% endblock %}

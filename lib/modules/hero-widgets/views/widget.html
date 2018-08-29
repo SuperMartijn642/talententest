@@ -1,0 +1,26 @@
+<section class="hero is-light is-bold is-large">
+  <div class="hero-body">
+    <div class="container">
+      {{
+        apos.area(data.widget, 'areaBody', {
+          widgets: {
+            link: {},
+            twocolumn: {},
+            'apostrophe-images': {
+              size: 'full'
+            },
+            'apostrophe-rich-text': {
+              toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink', 'Table', 'BulletedList', 'Blockquote' ],
+              styles: [
+                { name: 'Heading', element: 'h3' },
+                { name: 'Subheading', element: 'h4' },
+                { name: 'Paragraph', element: 'p' }
+              ]
+            },
+            'apostrophe-html': {}
+          }
+        })
+      }}
+    </div>
+  </div>
+</section>

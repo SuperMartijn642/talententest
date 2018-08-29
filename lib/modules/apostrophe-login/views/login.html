@@ -1,0 +1,49 @@
+{% extends "loginBase.html" %} {% block extraHead %}
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+{% endblock %} {% block main %}
+
+
+
+<section class="hero is-alt is-fullheight is-light">
+  <div class="hero-body">
+    <div class="container">
+      <article class="card is-rounded">
+        <div class="card-content">
+          <h1 class="title">
+                Login
+              </h1> {% block form %}
+          <form action="{% block action %}{{ apos.prefix }}/login{% endblock %}" method="post">
+            <div class="field">
+              <label class="label">Username</label>
+              <div class="control has-icons-left">
+                <input class="input" type="text" placeholder="Username" name="username">
+                <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+              </div>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="password" placeholder="Password" name="password">
+                <span class="icon is-small is-left">
+      <i class="fas fa-lock"></i>
+    </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <button type="submit" class="button is-success">
+                  Login
+    </button>
+              </p>
+            </div>
+
+          </form>
+          {% endblock %}
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
