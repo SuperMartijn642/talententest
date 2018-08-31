@@ -8,12 +8,14 @@ var apos = require('apostrophe')({
   // configuring user accounts.
 
   modules: {
-
+    'link-widgets': {},
+    'twocolumn-widgets': {},
+    'hero-widgets': {},
     // Apostrophe module configuration
 
     // Note: most configuration occurs in the respective
     // modules' directories. See lib/apostrophe-assets/index.js for an example.
-    
+
     // However any modules that are not present by default in Apostrophe must at
     // least have a minimal configuration here: `moduleName: {}`
 
