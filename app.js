@@ -11,6 +11,7 @@ var apos = require('apostrophe')({
     'link-widgets': {},
     'twocolumn-widgets': {},
     'hero-widgets': {},
+    'card-widgets': {},
     // Apostrophe module configuration
 
     // Note: most configuration occurs in the respective

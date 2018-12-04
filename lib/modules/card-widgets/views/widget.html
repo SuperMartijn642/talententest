@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="card-image">
+    <!-- <figure class="image is-4by3">
+      <img src="img/hd-wallpaper-mountain-range-mountains-114979.jpg" alt="Placeholder image"> -->
+
+      {{ apos.singleton(data.widget, 'cardimage', 'apostrophe-images', {
+  limit: 1,
+  addLabel: 'Set the logo',
+  editLabel: 'Change the logo',
+  controls: {
+    movable: false,
+    removable: false,
+    position: 'bottom-right'
+  }
+}) }}
+
+    <!-- </figure> -->
+  </div>
+  <div class="card-content">
+
+    <div class="content">
+      {{ apos.area(data.widget, 'mycontentarea', {
+    widgets: {
+      'apostrophe-rich-text': {
+        toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink', 'Table', 'BulletedList', 'Blockquote' ],
+        styles: [
+          { name: 'Heading', element: 'h1' },
+          { name: 'Subheading', element: 'h2' },
+          { name: 'Paragraph', element: 'p' }
+        ]
+      },
+      'apostrophe-images': {
+        size: 'full'
+      }
+    }
+  }) }}
+    </div>
+    <a class="button is-primary">Bekijk meer</a>
+  </div>
+
+
+</div>
