@@ -10,8 +10,11 @@ var apos = require('apostrophe')({
   modules: {
     'link-widgets': {},
     'twocolumn-widgets': {},
+    'threecolumn-widgets': {},
     'hero-widgets': {},
     'card-widgets': {},
+    'image-widgets':{},
+
     // Apostrophe module configuration
 
     // Note: most configuration occurs in the respective

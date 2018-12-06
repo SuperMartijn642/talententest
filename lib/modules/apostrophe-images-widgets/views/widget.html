@@ -1,0 +1,8 @@
+{%- for entry in data.widget._pieces -%}
+{%- set image = entry.item or entry -%}
+
+<img src="{{ apos.attachments.url(image.attachment, { size: data.options.size }) }}" alt="{{ data.widget.image.description or data.widget.image.title }}">
+
+
+
+{%- endfor -%}
