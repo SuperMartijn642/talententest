@@ -1,0 +1,47 @@
+<div class="columns">
+	<div class="column">
+		{{apos.area(data.widget,'left',{
+			limit: 1,
+			widgets: {
+				'apostrophe-rich-text': {
+					toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink', 'Table', 'BulletedList', 'Blockquote' ],
+					styles: [
+						{ name: 'Heading', element: 'h1', attributes: {class: 'is-3'} },
+						{ name: 'Subheading', element: 'h2', attributes: {class: 'is-2'} },
+						{ name: 'Paragraph', element: 'p' }
+					]
+				}
+			}
+		})}}
+	</div>
+	<div class="column">
+		{{apos.area(data.widget,'center',{
+			limit: 1,
+			widgets: {
+				'apostrophe-rich-text': {
+					toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink', 'Table', 'BulletedList', 'Blockquote' ],
+					styles: [
+						{ name: 'Heading', element: 'h1' },
+						{ name: 'Subheading', element: 'h2' },
+						{ name: 'Paragraph', element: 'p' }
+					]
+				}
+			}
+		})}}
+	</div>
+	<div class="column">
+		{{apos.area(data.widget,'right',{
+			limit: 1,
+			widgets: {
+				'apostrophe-rich-text': {
+					toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink', 'Table', 'BulletedList', 'Blockquote' ],
+					styles: [
+						{ name: 'Heading', element: 'h1' },
+						{ name: 'Subheading', element: 'h2' },
+						{ name: 'Paragraph', element: 'p' }
+					]
+				}
+			}
+		})}}
+	</div>
+</div>

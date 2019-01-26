@@ -1,0 +1,199 @@
+{#
+  This is an example home page template. It inherits and extends a layout template
+  that lives in the top-level views/ folder for convenience
+#}
+
+{% extends "base.html" %}
+
+{% block extraHead %}
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Get all "navbar-burger" elements
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+        // Get the target from the "data-target" attribute
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+
+{% endblock %}
+
+{% block main %}
+
+
+
+
+<nav class="navbar is-transparent">
+  <div class="container">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="https://bulma.io/">
+        Home
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="/documentation/overview/start/">
+          Docs
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          <a class="navbar-item" href="/documentation/overview/start/">
+            Overview
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
+            Modifiers
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+            Columns
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+            Layout
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
+            Form
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
+            Elements
+          </a>
+          <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
+            Components
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="button is-primary" href="/login">
+              <span class="icon">
+                <i class="fas fa-sign-in-alt"></i>
+              </span>
+              <span>Login</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</nav>
+
+
+  <section class="section">
+    <div class="container">
+      <h3>Hello world!
+
+      {% if not data.user %}
+        <a class="button" href="/login">Login</a>
+      {% endif %}
+    </h3>
+
+    <h1 class="title is-1">Title 1</h1>
+    <ul class="tabs">
+  {% for tab in data.home._children %}
+    <li><a href="{{ tab._url }}">{{ tab.title }}</a></li>
+  {% endfor %}
+</ul>
+    <p>This is a very bare bones Apostrophe project. Now, get to work and make a real website! {{ data.user.title }}</p>
+    <div class="card">
+    <div class="card-content">
+      <div class="content">
+
+    {{ apos.area(data.page, 'body', {
+      widgets: {
+        'apostrophe-images': {
+          size: 'full'
+        },
+        'apostrophe-rich-text': {
+          toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink', 'Table', 'BulletedList', 'Blockquote' ],
+          styles: [
+            { name: 'Heading', element: 'h3' },
+            { name: 'Subheading', element: 'h4' },
+            { name: 'Paragraph', element: 'p' }
+          ]
+        }
+      }
+    }) }}
+</div>
+  </div>
+</div>
+<div class="card">
+<div class="card-content">
+    {{ apos.singleton(data.page, 'logo', 'apostrophe-images', {
+  limit: 1,
+  minSize: [ 1200, 600 ],
+  addLabel: 'Set the logo',
+  editLabel: 'Change the logo',
+  controls: {
+    movable: true,
+    removable: true,
+    position: 'bottom-right'
+  }
+}) }}
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<div class="content">
+{{ apos.area(data.page, 'bodyb', {
+  widgets: {
+    'apostrophe-rich-text': {
+      toolbar: [ 'Bold', 'Italic' ]
+    },
+    'apostrophe-images': {
+      size: 'full'
+    },
+    'apostrophe-html': {}
+  }
+}) }}
+{{
+  apos.area(data.page, 'navigation', {
+    widgets: {
+      link: {},
+      twocolumn: {},
+      hero: {}
+    }
+  })
+}}
+</div>
+</div>
+</div>
+
+    </div>
+  </section>
+
+
+
+{% endblock %}

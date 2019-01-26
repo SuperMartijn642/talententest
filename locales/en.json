@@ -103,5 +103,12 @@
 	"CustomImage": "CustomImage",
 	"Save CustomImage": "Save CustomImage",
 	"Edit CustomImage": "Edit CustomImage",
-	"Three column": "Three column"
+	"Three column": "Three column",
+	"Banner": "Banner",
+	"Add undefined": "Add undefined",
+	"Two Columns": "Two Columns",
+	"Three Columns": "Three Columns",
+	"Header": "Header",
+	"Save Header": "Save Header",
+	"Edit Header": "Edit Header"
 }

@@ -8,23 +8,24 @@ var apos = require('apostrophe')({
   // configuring user accounts.
 
   modules: {
-    'link-widgets': {},
-    'twocolumn-widgets': {},
-    'threecolumn-widgets': {},
-    'hero-widgets': {},
-    'card-widgets': {},
-    'image-widgets':{},
-
     // Apostrophe module configuration
-
-    // Note: most configuration occurs in the respective
-    // modules' directories. See lib/apostrophe-assets/index.js for an example.
-
-    // However any modules that are not present by default in Apostrophe must at
+	
+    // Any modules that are not present by default in Apostrophe must at
     // least have a minimal configuration here: `moduleName: {}`
-
-    // If a template is not found somewhere else, serve it from the top-level
-    // `views/` folder of the project
+	
+    //'link-widgets': {},
+    //'twocolumn-widgets': {},
+    //'threecolumn-widgets': {},
+    //'hero-widgets': {},
+    //'card-widgets': {},
+    //'image-widgets':{},
+	
+	'banner-widgets': {},
+	'banner-two-column-widgets': {},
+	'banner-three-column-widgets': {},
+	'banner-header-widgets': {},
+	//'banner-image-widgets': {},
+	//'image-banner-widgets': {},
 
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') }
 
