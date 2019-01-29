@@ -1,24 +1,31 @@
-<section class="section is-transparent">
-	<div class="container is-transparent">
-		<div class="content">
-			{{apos.area(data.widget,'content',{
-				limit: 1,
-				widgets: {
-					'banner-two-column': {},
-					'banner-three-column': {},
-					'banner-header': {
-						toolbar: [ 'Bold', 'Italic', 'Link', 'Unlink' ]
-					},
-					'apostrophe-rich-text': {
-						toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink', 'Table', 'BulletedList', 'Blockquote' ],
-						styles: [
-							{ name: 'Heading', element: 'h1', attributes: {class: 'is-3'} },
-							{ name: 'Subheading', element: 'h2' },
-							{ name: 'Paragraph', element: 'p' }
-						]
+<section class="section">
+	<div class="">
+		<div 
+			{% if data.widget.color %}
+				class="box" 
+				style="background-color: {{data.widget.color}}"
+			{% else %}
+				class="box has-background-white"
+			{% endif %}
+			>
+			<div data-rich-text class="content">
+				{{apos.area(data.widget,'content',{
+					limit: 1,
+					widgets: {
+						'banner-two-column': {},
+						'banner-three-column': {},
+						'banner-header': {},
+						'apostrophe-rich-text': {
+							toolbar: [ 'Styles', 'Bold', 'Italic', 'Link', 'Unlink', 'Table', 'BulletedList', 'Blockquote' ],
+							styles: [
+								{ name: 'Heading', element: 'h1', attributes: {class: 'is-size-3'} },
+								{ name: 'Subheading', element: 'h2', attributes: {class: 'is-size-4'} },
+								{ name: 'Paragraph', element: 'p', attributes: {class: 'is-size-5'} }
+							]
+						}
 					}
-				}
-			})}}
+				})}}
+			</div>
 		</div>
 	</div>
 </section>

@@ -2,7 +2,6 @@
 {% extends data.outerLayout %}
 
 {% block title %}
-  {# Create a useful, SEO-friendly title tag based on what we have #}
   {% if data.piece %}
     {{ data.piece.title }}
   {% elseif data.page %}

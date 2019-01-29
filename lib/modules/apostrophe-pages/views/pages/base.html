@@ -77,11 +77,13 @@
 
 {% block main %}
 <div class="body">
-	{{ apos.area(data.page,'body',{
-		widgets: {
-			'banner': {}
-		}
-	}) }}
+	<div class="section">
+		{{ apos.area(data.page,'body',{
+			widgets: {
+				'banner': {}
+			}
+		}) }}
+	</div>
 </div>
 {% endblock %}
 
